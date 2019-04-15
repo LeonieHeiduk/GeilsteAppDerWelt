@@ -4,14 +4,14 @@ import { TabsPage } from './tabs.page';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'tabs',
+  { path: '',
     component: TabsPage,
     children: [
-      { path: 'home',
+      { path: 'home', 
         children: [
           {
             path: '',
-            loadChildren: '../platform/home/home.module#HomePageModule'
+            loadChildren: '../home/home.module#HomePageModule'
           }
         ]},
       {
@@ -19,7 +19,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../platform/anfrage/anfrage.module#AnfragePageModule'
+            loadChildren: '../anfrage/anfrage.module#AnfragePageModule'
         }
       ]},
     {
@@ -33,15 +33,13 @@ const routes: Routes = [
     ]},
     {
       path: '',
-      redirectTo: '/platform/home',
+      redirectTo: 'home',
       pathMatch: 'full'
   }];
 
 @NgModule({
   declarations: [],
-  exports: [RouterModule],
-  imports: [RouterModule.forChild(routes),
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class TabsRouterModule { }
