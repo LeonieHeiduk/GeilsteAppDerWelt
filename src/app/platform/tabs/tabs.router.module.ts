@@ -27,7 +27,7 @@ const routes: Routes = [
       children: [
         {
           path: '',
-          loadChildren: '../platform/schmoekern/schmoekern.module#SchmoekernPageModule'
+          loadChildren: '../schmoekern/schmoekern.module#SchmoekernPageModule'
         }
       ]}
     ]},
