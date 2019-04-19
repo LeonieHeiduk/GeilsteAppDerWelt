@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ArtikelService } from '../../services/artikel.service';
+
 @Component({
   selector: 'app-artikel',
   templateUrl: './artikel.component.html',
@@ -12,8 +14,12 @@ export class ArtikelComponent implements OnInit {
   preview_artikel_text: string  = ""
   artikel_text: string = ""
 
-  constructor() { }
+    constructor(
+        private artikelService: ArtikelService
+    ) { }
 
-  ngOnInit() {}
+    ngOnInit() {
+        this.artikelService.test();
+    }
 
 }

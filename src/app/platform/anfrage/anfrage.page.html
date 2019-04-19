@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>anfrage</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Anfrage</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-text>
+        <h4 class="ion-padding-horizontal">
+            Hast du eine Idee, ein Problem oder einen Wunsch? <br />
+            Aeuﬂere dich hier und wir nehmen deinen persoenlichen Beitrag zur Kenntnis
+        </h4>
+    </ion-text>
+
+    <ion-list>
+        <ion-radio-group>
+            <ion-list-header>
+                <ion-label> Kategorie </ion-label>
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label> App </ion-label>
+                <ion-radio slot="start" value="app"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label> Themenvorschlag </ion-label>
+                <ion-radio slot="start" value="themenvorschlag"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label> Sonstiges </ion-label>
+                <ion-radio slot="start" value="sonstiges"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+    </ion-list>
+
+    <ion-item>
+        <ion-label> Ueberschrift </ion-label>
+        <ion-input position="stacked" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label> Deine Nachricht </ion-label>
+        <ion-textarea></ion-textarea>
+    </ion-item>
 
 </ion-content>

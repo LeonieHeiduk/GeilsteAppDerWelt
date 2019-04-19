@@ -16,6 +16,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { UserService } from './services/user.service'
+import { ArtikelService } from './services/artikel.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { UserService } from './services/user.service'
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    UserService],
+    UserService, ArtikelService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
